@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Flex property</h2>
+    The flex property sets flexible length on flexible items.
+    <h5>Example:</h5>
+    <style>
+        .container{
+            border: 3px solid black;
+            width: 100%;
+            height: 540px;
+            font-size: 20px;
+            color: black;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            border: 3px solid rgb(10, 10, 10);
+            margin: 20px;
+
+        }
+    </style>
+    <div class="container">
+        <div class="box">Box-1</div>
+        <div class="box">Box-2</div>
+        <div class="box">Box-3</div>
+        <div class="box">Box-4</div>
+    </div>
+</body>
+</html>
