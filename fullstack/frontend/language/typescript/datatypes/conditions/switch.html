@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Days of week</h1>
+        <h1 id="root"></h1>
+        <button onclick="days()">click here</button>
+
+    </center>
+    <script>
+        function days(){
+            let random=Math.floor(Math.random()*7+1) 
+           let data= document.getElementById('root')
+           
+           switch(random){
+            case 1:
+            data.innerHTML="Monday"
+            break;
+            case 2:
+            data.innerHTML="Tuesday"
+            break;
+            case 3:
+            data.innerHTML="Wednesday"
+            break;
+            case 4:
+            data.innerHTML="Thursday"
+            break;
+         case 5:
+            data.innerHTML="Friday"
+            break;
+            case 6:
+            data.innerHTML="Saturday"
+            break;
+            case 7:
+            data.innerHTML="Sunday"
+            break;
+            
+           }
+        }
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+<script>
+    async function po(){
+    let data=fetch('https://fakestoreapi.com/products')
+    console.log(await (await data).json())
+}
+po()
+   
+</script>

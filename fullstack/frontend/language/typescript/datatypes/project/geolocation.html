@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <center>
+        <style>
+            #map { height: 400px;
+                width: 400px;
+                border-radius: 50%;
+               border: 10%;
+               align-items: center;
+               
+             }
+             h1{
+                color: brown;
+                border-radius: 10%;
+                border: 10%;
+                flex-direction: column;
+             }
+        </style>
+ <title>MY LIVE LOCATION</title>
+</head>
+<body>
+   
+    <div id="map"></div>
+    <ul><h1>MY LIVE LOCATION</h1></ul>
+    <script>
+       navigator.geolocation.
+       getCurrentPosition((position)=>{
+       let {latitude,longitude} =
+       position.coords;
+       var map = L.map('map').setView([latitude,longitude], 19);
+       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    minZoom:1,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+L.mark([latitude,longitude])
+.addTo(map);
+       });
+    </script>
+    </center>
+</body>
+</html>

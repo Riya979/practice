@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body background="">
+    <center>
+    <h3>PRIYANKA SAVANUR</h3>
+    
+   
+    <div id="root"></div>
+    <input type="text" name="" placeholder="First Name" value="priyanka" id="abc">
+    <button onclick="capture()">click</button>
+    <br>
+    <br>
+    <div id="read"></div>
+    <input type="text" name="" placeholder="Last Name" value="priya" id="abc2">
+    <button onclick="capture1()">click</button>
+    <br>
+    <br>
+    <div id="write"></div>
+    <input type="email" name=""  placeholder="Email" value="priyanka@gmail.com" id="abc3">
+    <button onclick="capture2()">click</button>
+    <br>
+    <br>
+    <div id="learn"></div>
+    <input type="password" name=""   placeholder="Password"  value="12345678" id="abc4">
+    <button onclick="capture3()">click</button>
+    <br>
+    <br>
+    <div id="explain"></div>
+    <input type="date" name=""   placeholder="Date"  value="12.10.2022" id="abc5">
+    <button onclick="capture4()">click</button>
+    
+    <script>
+        
+        function capture() {
+            
+            let data=document.getElementById('root')
+            let data1=document.getElementById('abc')
+            data.innerHTML = `hello ${data1.value}` 
+            console.log(data1.value)
+        }
+
+        function capture1(){
+
+            let data2=document.getElementById('read')
+            let dataread=document.getElementById('abc2')
+            data2.innerHTML = `hello ${dataread.value}`
+            console.log(dataread.value)
+        }
+        
+        function capture2(){
+            let data3=document.getElementById('write')
+            let datawrite=document.getElementById('abc3')
+            data3.innerHTML = `hello ${datawrite.value}`
+            console.log(datawrite.value)
+        
+        }
+        function capture3(){
+            let data4=document.getElementById('learn')
+            let datalearn=document.getElementById('abc4')
+            data4.innerHTML = `hello ${datalearn.value}`
+            console.log(datalearn.value)
+        
+        }
+        function capture4(){
+            let data5=document.getElementById('explain')
+            let dataexplain=document.getElementById('abc5')
+            data5.innerHTML = `date ${dataexplain.value}`
+            console.log(dataexplain.value)
+        
+        }
+
+    </script>
+    
+        
+
+
+
+
+</center>
+        
+
+    
+</body>
+
+</html>
