@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+
+    <script>
+        for(i=0;i<0;i++){
+    let div= document.getElementById('root')
+  let img= document.createElement('img')
+    img.src='https://avatars.githubusercontent.com/u/1?v=4'
+   img.style.height="200px"
+   div.appendChild(img) }
+        async function github(){
+           
+            var data=fetch('https://api.github.com/users')
+            let data1=await(await data).json()
+            data1.map((item)=>{
+        
+        console.log( item.image)
+        let div= document.getElementById('root')
+    let img= document.createElement('img')
+    img.src=item.avatar_url
+    img.style.height="200px"
+    div.appendChild(img)
+    })
+
+        }
+github()
+        
+    </script>
+</body>
+</html>

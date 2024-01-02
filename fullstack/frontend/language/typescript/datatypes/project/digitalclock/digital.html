@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1 id="root">01:25:30</h1>
+    </center>
+
+    <script>
+        var sec=0
+        var munites=25
+        let h1=document.getElementById('root')
+        setInterval(()=>{
+            console.log(sec)
+            h1.innerHTML=`01:${munites}:${sec}`
+            sec++
+        
+            if(sec==10){
+                munites++
+                sec=0
+            }
+        },1000)
+        
+        
+        </script>
+</body>
+</html>
